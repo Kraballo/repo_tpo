@@ -1,0 +1,91 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #12203E;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	min-height: 100vh;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1200px;
+	margin: auto;
+	padding: 40px 0;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+	color: black;
+}
+
+.titulo {
+	font-size: 24px;
+	padding: 20px 0;
+}
+
+.contenedor-sitios {
+	display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+	border-radius: 10px;
+	min-height: 200px;
+	font-weight: bold;
+	padding: 20px;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+
+	
+}
+.card .textos {
+	height: 100%;
+    display: flex;
+	flex-direction: column;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 900px){
+	.contenedor {
+		grid-template-areas: "header header header header header"
+						 "contenido contenido contenido contenido"
+						 "widget-1 widget-2 widget-3 widget-4"
+						 "footer footer footer footer";
+	}
+}
+
+@media screen and (max-width: 700px){
+	.contenedor {
+		grid-template-areas: "header header header header"
+						 "contenido contenido contenido contenido"
+						 "widget-1 widget-1 widget-2 widget-2"
+						 "widget-3 widget-3 widget-4 widget-4"
+						 "footer footer footer footer";
+	}
+}
+
+@media screen and (max-width: 450px){
+	.contenedor {
+		grid-template-areas: "header header header header"
+						 "contenido contenido contenido contenido"
+						 "widget-1 widget-1 widget-1 widget-1"
+						 "widget-2 widget-2 widget-2 widget-2"
+						 "widget-3 widget-3 widget-3 widget-3"
+						 "widget-4 widget-4 widget-4 widget-4"
+						 "footer footer footer footer";
+	}
+}
+.my-element {
+	display: inline-block;
+	margin: 0 0.5rem;
+  
+	animation: bounce; /* referring directly to the animation's @keyframe declaration */
+	animation-duration: 2s; /* don't forget to set a duration! */
+  }

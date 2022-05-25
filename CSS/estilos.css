@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: rgb(230, 230, 230);
+    color: #000;
+    font-family: 'Arial', sans-serif;
+    min-height: 100%;
+}
+
+.contenedor {
+	width: 90%;
+	/* max-width: 1000px; */
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas: "header header header header"
+						 "contenido contenido contenido contenido"
+						 "widget-1 widget-2 widget-3 widget-4"
+						 "footer footer footer footer";
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer {
+	background: #fff;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+.contenedor .header {
+	background: #12203E;
+	color: #fff;
+	grid-area: header;
+}
+
+.contenedor .contenido {
+	grid-area: contenido;
+}
+
+/* .contenedor .sidebar {
+	grid-column: 3 / 4;
+	background: #fAA43D;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100px;
+	grid-area: sidebar;
+} */
+
+.contenedor .widget-1,
+.contenedor .widget-2,
+.contenedor .widget-3,
+.contenedor .widget-4 {
+	background: #55a8fd;
+	color: #fff;
+	height: 100px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contenedor .widget-1 {
+	grid-area: widget-1;
+}
+.contenedor .widget-2 {
+	grid-area: widget-2;
+}
+.contenedor .widget-3 {
+	grid-area: widget-3;
+}
+.contenedor .widget-4 {
+	grid-area: widget-4;
+}
+.contenedor .footer {
+	background: #12203E;
+	color: #fff;
+	grid-area: footer;
+	padding: 30px;
+	height: 200px;
+}
+
+.redes{
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.redes li{
+	display: inline-block;
+}
+.redes a{
+	padding: 10px;
+}
+
+@media screen and (max-width: 900px){
+	.contenedor {
+		grid-template-areas: "header header header header header"
+						 "contenido contenido contenido contenido"
+						 "widget-1 widget-2 widget-3 widget-4"
+						 "footer footer footer footer";
+	}
+}
+
+@media screen and (max-width: 700px){
+	.contenedor {
+		grid-template-areas: "header header header header"
+						 "contenido contenido contenido contenido"
+						 "widget-1 widget-1 widget-2 widget-2"
+						 "widget-3 widget-3 widget-4 widget-4"
+						 "footer footer footer footer";
+	}
+}
+
+@media screen and (max-width: 450px){
+	.contenedor {
+		grid-template-areas: "header header header header"
+						 "contenido contenido contenido contenido"
+						 "widget-1 widget-1 widget-1 widget-1"
+						 "widget-2 widget-2 widget-2 widget-2"
+						 "widget-3 widget-3 widget-3 widget-3"
+						 "widget-4 widget-4 widget-4 widget-4"
+						 "footer footer footer footer";
+	}
+}
